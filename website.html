@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Website Layout with Background</title>
+    <link rel="stylesheet" href="website.css">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <h1>travelAZ</h1>
+        </div>
+        <nav>
+        	<a href= "website.html"> Home</a>
+            <a href="chandler.html">Chandler</a>
+            <a href="flagstaff.html">Flagstaff</a>
+            <a href="phoenix.html">Phoenix</a>
+            <a href="sedona.html">Sedona</a>
+            <a href = "contact.html"> Contact</a>
+        </nav>
+    </header>
+	<section class="reviews">
+  <div class="review-box">
+    <h3>Review</h3>
+    <p>“TravelAZ made our trip unforgettable! The destinations, service, and planning were top notch.” -Anna Knight</p>
+    <p style="font-size: 1.5em; color: #F2E9E4;">⭐⭐⭐⭐⭐</p>
+  </div>
+
+  <div class="review-box">
+    <h3>Review</h3>
+    <p>“Absolutely amazing experience with TravelAZ. Everything was smooth and perfectly organized.”-Radhi Patel</p>
+    <p style="font-size: 1.5em; color: #F2E9E4;">⭐⭐⭐⭐⭐</p>
+  </div>
+</section>
+
+    <section class="hero">
+        <div class="hero-content">
+            <h2>Welcome to travelAZ</h2>
+            <p>Welcome to the hottest State in the United States. We hope our travel guide will help you visit and see as many places in arizona!Arizona (AZ) is a southwestern state known for its stunning desert landscapes, including the iconic Grand Canyon, one of the seven natural wonders of the world. The state boasts a diverse climate, with hot summers and mild winters, and offers an abundance of outdoor activities, from hiking and camping in its national parks to exploring vibrant cities like Phoenix and Tucson. Arizona is rich in Native American history and culture, with numerous tribal communities calling it home. Its striking natural beauty, combined with a mix of modern cities and small towns, makes Arizona a unique destination for travelers and residents alike.</p>
+        </div>
+    </section>
+
+    <section class="content">
+        <div class="container">
+            <h2>About Us</h2>
+            <p>Discover the best of Arizona with TravelAZ, your guide to unforgettable adventures, delicious eats, and cozy stays. In Chandler, stroll through the vibrant Downtown district, savor global flavors at local favorites like DC Steakhouse, and unwind at luxury spots like the Crowne Plaza Resort. Head north to Flagstaff, where fresh mountain air and charming cafes like Tourist Home Café await. Stay at cozy lodges like Little America Hotel and explore must-see attractions like Walnut Canyon and Lowell Observatory. In the heart of the state, Phoenix offers a lively mix of outdoor fun and city sophistication — hike Camelback Mountain, marvel at the Desert Botanical Garden, and enjoy bold dining at spots like Bacanora. Top off your visit with a stay at the stylish FOUND:RE Hotel. Finally, experience the magic of Sedona, where breathtaking red rock vistas meet spiritual energy. Spend your days hiking Cathedral Rock, browsing local art galleries, and dining at Elote Café. Pamper yourself at Enchantment Resort or the luxurious Mii Amo Spa. Whether you’re exploring, relaxing, or savoring every bite, TravelAZ brings you the very best of Chandler, Flagstaff, Phoenix, and Sedona — your ultimate Arizona journey starts here.</p>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; travelAZ | All rights reserved</p>
+    </footer>
+</body>
+
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 40px;
+      background-color: #f9f9f9;
+    }
+    form {
+      background: black;
+      padding: 20px;
+      border-radius: 8px;
+      max-width: 500px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    }
+    label {
+      display: block;
+      margin-top: 15px;
+      font-weight: bold;
+    }
+    input[type="text"], select {
+      width: 100%;
+      padding: 8px;
+      margin-top: 5px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+    }
+    button {
+      margin-top: 20px;
+      padding: 10px 15px;
+      background-color: #4CAF50;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      font-size: 16px;
+    }
+    button:hover {
+      background-color: #45a049;
+    }
+    .result {
+      margin-top: 30px;
+      padding: 20px;
+      background: black;
+      border: 1px solid #b2ffb2;
+      border-radius: 8px;
+    }
+  </style>
+</head>
+<body>
+
+<h2>Submit Your Hotel Rating</h2>
+
+<form id="ratingForm">
+  <label for="hotelName">Hotel Name:</label>
+  <input type="text" id="hotelName" required>
+
+  <label for="locationRating">Location Rating:</label>
+  <select id="locationRating" required>
+    <option value="">Select</option>
+    <option value="1">1 - Poor</option>
+    <option value="2">2 - Fair</option>
+    <option value="3">3 - Good</option>
+    <option value="4">4 - Very Good</option>
+    <option value="5">5 - Excellent</option>
+  </select>
+
+  <label for="hotelRating">Hotel Rating:</label>
+  <select id="hotelRating" required>
+    <option value="">Select</option>
+    <option value="1">1 - Poor</option>
+    <option value="2">2 - Fair</option>
+    <option value="3">3 - Good</option>
+    <option value="4">4 - Very Good</option>
+    <option value="5">5 - Excellent</option>
+  </select>
+
+  <label for="foodRating">Food Rating:</label>
+  <select id="foodRating" required>
+    <option value="">Select</option>
+    <option value="1">1 - Poor</option>
+    <option value="2">2 - Fair</option>
+    <option value="3">3 - Good</option>
+    <option value="4">4 - Very Good</option>
+    <option value="5">5 - Excellent</option>
+  </select>
+
+  <button type="submit">Submit Rating</button>
+</form>
+
+<div id="result" class="result" style="display:none;"></div>
+
+<script>
+  const form = document.getElementById('ratingForm');
+  const resultDiv = document.getElementById('result');
+
+  form.addEventListener('submit', function(event) {
+    event.preventDefault();
+
+    const hotelName = document.getElementById('hotelName').value;
+    const locationRating = document.getElementById('locationRating').value;
+    const hotelRating = document.getElementById('hotelRating').value;
+    const foodRating = document.getElementById('foodRating').value;
+
+    resultDiv.style.display = 'block';
+    resultDiv.innerHTML = `
+      <h3>Thank you for your review!</h3>
+      <p><strong>Hotel Name:</strong> ${hotelName}</p>
+      <p><strong>Location Rating:</strong> ${locationRating} / 5</p>
+      <p><strong>Hotel Rating:</strong> ${hotelRating} / 5</p>
+      <p><strong>Food Rating:</strong> ${foodRating} / 5</p>
+    `;
+
+    form.reset();
+  });
+</script>
+
+</body>
+
+
+</html>
